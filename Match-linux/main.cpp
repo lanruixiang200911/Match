@@ -23,13 +23,13 @@ int main(){
     cin>>n;
     system("rm -r test");
     cout<<"正在编译 data.cpp\n";
-    system("g++ data.cpp -o data");
+    system("g++ -std=c++11 data.cpp -o data");
     cout<<"正在编译 code1.cpp\n";
-    system("g++ code1.cpp -o code1");
+    system("g++ -std=c++11 code1.cpp -o code1");
     cout<<"正在编译 code2.cpp\n";
-    system("g++ code2.cpp -o code2");
+    system("g++ -std=c++11 code2.cpp -o code2");
     cout<<"正在编译 f.cpp\n";
-    system("g++ f.cpp -o f");
+    system("g++ -std=c++11 f.cpp -o f");
     system(("./f "+to_string(n)).c_str());
     for(int i=1;i<=n;i++){
         fun(i,n);
