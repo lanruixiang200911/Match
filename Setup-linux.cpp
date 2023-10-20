@@ -22,7 +22,7 @@ int main(){
     	cout<<"请去下载 g++ 编译器再重新安装.\n";
     	return 0;
 	}
-    cout<<"请输入 g++ 编译指令，并以 @ 结尾：（如 -std=c++11 -O2@）";
+    cout<<"请输入 g++ 编译指令，并以 @ 结尾，已自带 -w：（至少 C++11）（如 -std=c++11 -O2@）";
     string add;
     char c;
     while(c=getchar()){
@@ -30,7 +30,7 @@ int main(){
         if(c=='@')break;
         add+=c;
     }
-    g_way="g++ "+add;
+    g_way="g++ -w "+add;
     way+="/Match/";
     system(("mkdir "+way).c_str());
     freopen("/dev/tty","w",stdout);
@@ -63,7 +63,7 @@ int main(){
 	cout<<code_css;
     system(("mkdir "+way+"test").c_str());
 	freopen("/dev/tty","w",stdout);
-    system((g_way+" -w "+way+"main.cpp -o "+way+"main").c_str());
+    system((g_way+" "+way+"main.cpp -o "+way+"main").c_str());
     cout<<"安装结束\n";
     return 0;
 }

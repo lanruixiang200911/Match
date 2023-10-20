@@ -35,7 +35,7 @@ int main(){
     	system("pause");
     	return 0;
 	}
-    cout<<"请输入 g++ 编译指令，并以 @ 结尾：（至少 C++11）（如 -std=c++11 -O2@）";
+    cout<<"请输入 g++ 编译指令，并以 @ 结尾，已自带 -w：（至少 C++11）（如 -std=c++11 -O2@）";
     string add;
     char c;
     while(c=getchar()){
@@ -43,7 +43,7 @@ int main(){
         if(c=='@')break;
         add+=c;
     }
-    g_way="g++ "+add;
+    g_way="g++ -w "+add;
     way+="\\Match\\";
     system(("md "+way).c_str());
     freopen("CON","w",stdout);
@@ -83,7 +83,7 @@ int main(){
 	freopen((way+"light.css").c_str(),"w",stdout);
 	cout<<code_css;
 	freopen("CON","w",stdout);
-    system((g_way+" -w "+way+"main.cpp -o "+way+"main").c_str());
+    system((g_way+" "+way+"main.cpp -o "+way+"main").c_str());
     cout<<"安装结束，5 秒后打开使用说明\n";
     _sleep(5000);
     system(("start "+way+"使用说明.html").c_str());
