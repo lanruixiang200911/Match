@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include"file/myhead.h"
 using namespace std;
 vector<int>vec,vec2;
 void fun(int num){
@@ -15,14 +15,14 @@ int main(){
     cout<<"对拍次数: ";
     cin>>n;
     system("rmdir /S /Q test");
-    cout<<"正在编译 data.cpp\n";
-    system("g++ -std=c++11 data.cpp -o data");
-    cout<<"正在编译 code1.cpp\n";
-    system("g++ -std=c++11 code1.cpp -o code1");
-    cout<<"正在编译 code2.cpp\n";
-    system("g++ -std=c++11 code2.cpp -o code2");
-    cout<<"正在编译 f.cpp\n";
-    system("g++ -std=c++11 f.cpp -o f");
+    cout<<del<<"正在编译 data.cpp";
+    system("g++ -w -std=c++14 -O2 data.cpp -o data");
+    cout<<del<<"正在编译 code1.cpp";
+    system("g++ -w -std=c++14 -O2 code1.cpp -o code1");
+    cout<<del<<"正在编译 code2.cpp";
+    system("g++ -w -std=c++14 -O2 code2.cpp -o code2");
+    cout<<del<<"正在编译 f.cpp";
+    system("g++ -w -std=c++14 -O2 f.cpp -o f");
     system(("f "+to_string(n)).c_str());
     for(int i=1;i<=n;i++){
         fun(i);

@@ -1,17 +1,10 @@
-#include<bits/stdc++.h>
+#include"file/myhead.h"
 using namespace std;
 namespace code{
     int main(){
         
         return 0;
     }
-}
-string tostr(char* c){
-    string s;
-    for(int i=0;c[i];i++){
-        s+=c[i];
-    }
-    return s;
 }
 int main(int argc,char* argv[]){
     string d="test\\"+tostr(argv[1])+"\\";
